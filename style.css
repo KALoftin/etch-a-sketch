@@ -10,20 +10,25 @@ body {
 
 .container {
   display: flex;
-  flex-wrap: wrap;
-  width: 50em;
-  /* border: 1px solid black; */
-}
-
-.container > div {
+  flex-direction: column;
+  width: 900px;
+  height: 550px;
   border: 1px solid black;
-  flex: auto;
-  height: 40px;
-  width: 40px;
 }
 
-.container > div:nth-child(16n + 1) {
+.container > div.column-div {
+  display: flex;
+  flex: 1;
+}
+
+div.column-div > div.row-div {
+  /* border: 1px solid black; */
+  display: flex;
+  flex: 1;
+}
+
+/* .container > div:nth-child(100n + 1) {
   width: 100%;
   border: 0;
   height: 0;
-}
+} */
